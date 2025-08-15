@@ -159,19 +159,9 @@ TBD
 
 ## Authors and Acknowledgements
 
-Brian Shing-Hei Wong<sup>1</sup>, Joshua Mincheol Kim<sup>1</sup>, Sin-Hang Fung<sup>1,2</sup>, Qing Xiong<sup>3</sup>, Kelvin Fu-Kiu Ao<sup>1</sup>, Junkang Wei<sup>1,4</sup>, Ran Wang<sup>1</sup>, Dan Michelle Wang<sup>1</sup>, Jingying Zhou<sup>1</sup>, Bo Feng<sup>1</sup>, Alfred Sze-Lok Cheng<sup>1</sup>, Kevin Y. Yip<sup>5,6,7,8,</sup>\*, Stephen Kwok-Wing Tsui<sup>1,9,</sup>\*, Qin Cao<sup>1,2,9,</sup>*
-
-1. School of Biomedical Sciences, The Chinese University of Hong Kong, Shatin, New Territories, Hong Kong SAR, China
-2. Shenzhen Research Institute, The Chinese University of Hong Kong, Shenzhen, China
-3. Department of Health Technology and Informatics, The Hong Kong Polytechnic University, Hung Hom, Kowloon, Hong Kong SAR, China
-4. Department of Computational Medicine and Bioinformatics, University of Michigan, Ann Arbor, MI, USA
-5. Center for Data Sciences, Sanford Burnham Prebys Medical Discovery Institute, La Jolla, CA, USA
-6. Cancer Genome and Epigenetics Program, NCI-Designated Cancer Center, Sanford Burnham Prebys Medical Discovery Institute, La Jolla, CA, USA
-7. Center for Neurologic Diseases, Sanford Burnham Prebys Medical Discovery Institute, La Jolla, CA, USA
-8. Department of Computer Science and Engineering, The Chinese University of Hong Kong, Shatin, New Territories, Hong Kong SAR, China
-9. Hong Kong Bioinformatics Centre, The Chinese University of Hong Kong, Shatin, New Territories, Hong Kong SAR, China
----
-*To whom correspondence should be addressed. Emails: kyip@sbpdiscovery.org (K.Y. Yip), kwtsui@cuhk.edu.hk (S.K.W. Tsui), qcao@cuhk.edu.hk (Q. Cao)
+```
+TBD
+```
 
 ## Contact Information
 
