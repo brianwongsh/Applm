@@ -103,7 +103,7 @@ def read_dataset(fasta_filepath, embedding_dir):
 
     x = np.array(x).squeeze()
     y = np.array(y).squeeze()
-    return seqid, x, y
+    return seqids, x, y
 
 
 if __name__ == "__main__":
