@@ -61,7 +61,7 @@ if __name__ == "__main__":
 
     with open(os.path.join(output_directory, "{:}_key_to_idx.pickle".format(project_name)), 'wb') as file:
         cPickle.dump(key_to_idx, file)
-    print(f"Key-to-index map saved to {output_path}")
+    print(f"Key-to-index map saved to {output_directory}")
 
     ### Step 2: Format identity matrix from ssearch36 formatted output
     with open(ssearch_output_path, 'r') as file:
@@ -86,7 +86,7 @@ if __name__ == "__main__":
             # Else remain 0
 
     np.save(os.path.join(output_directory, '{:}_pairwise_ident.npy'.format(project_name)), ident_mat)
-    print(f"Pairwise identity matrix saved to {output_path}")
+    print(f"Pairwise identity matrix saved to {output_directory}")
 
     ### Step 3: Create the h5 object which stores and retrieves the pairwise identities
 

@@ -38,4 +38,6 @@ ssearch36 -s BL62 -E 1e+10 -C 10 -T 16 "$FASTA_FILE" "$FASTA_FILE" | grep '>>' -
 # Run the Python script to process the output
 python misc/trim_ssearch36.py "$OUTPUT_FILE"
 
+rm "$OUTPUT_FILE"
+
 echo "Processing complete."

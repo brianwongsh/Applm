@@ -56,7 +56,7 @@ def read_fasta(filepath):
         fasta_dict[seq_id] = seq
     return fasta_dict
 
-def write_splits_to_fa(pos_splits, neg_splits, sequences, output_path = 'example_output'):
+def write_splits_to_fa(pos_splits, neg_splits, sequences, output_directory = 'example_output'):
     """
     Writes the partitioned positive and negative sequence splits to FASTA files.
 
@@ -71,7 +71,7 @@ def write_splits_to_fa(pos_splits, neg_splits, sequences, output_path = 'example
             list of negative sequence IDs.
         sequences (dict[str, str]): A dictionary mapping sequence IDs to their
             actual sequences.
-        output_path (str): The directory where the output FASTA files will be saved.
+        output_directory (str): The directory where the output FASTA files will be saved.
     """
     split_keys = sorted(list(pos_splits.keys()))
     for nk, k in enumerate(split_keys):
@@ -80,7 +80,7 @@ def write_splits_to_fa(pos_splits, neg_splits, sequences, output_path = 'example
             fasta_content += ">{:}\n{:}\n".format(seqid, sequences[seqid])
         for seqid in neg_splits[k]:
             fasta_content += ">{:}\n{:}\n".format(seqid, sequences[seqid])
-        with open(os.path.join(output_path, 'split_{:}.fa'.format(nk)), 'w') as file:
+        with open(os.path.join(output_directory, 'split_{:}.fa'.format(nk)), 'w') as file:
             file.write(fasta_content)
 
 if __name__ == "__main__":

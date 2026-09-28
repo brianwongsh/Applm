@@ -618,13 +618,14 @@ def get_minimal(
             # Find all positives that share > Tc with negatives and subset
             all_neg_h5 = seqdb.get_hdf5_mapped_idx(all_seqs['neg'])
             possible_pos = []
-            for i in all_seqs['pos']:
-                ident_list = seqdb.get_ident_list(i)[all_neg_h5]
-                neg_idx = np.where(ident_list >= tc)[0]
-                if len(neg_idx) > 0:
-                    possible_pos.append(i)
+            if len(all_neg_h5) > 0:
+                for i in all_seqs['pos']:
+                    ident_list = seqdb.get_ident_list(i)[all_neg_h5]
+                    neg_idx = np.where(ident_list >= tc)[0]
+                    if len(neg_idx) > 0:
+                        possible_pos.append(i)
             other_pos = list(set(all_seqs['pos']).difference(set(possible_pos)))
-            n = min_pos-len(possible_pos)
+            n = np.minimum(min_pos-len(possible_pos), len(other_pos))
             if n > 0:
                 np.random.seed(randomseed)
                 subset_pos = possible_pos + list(np.random.choice(other_pos, n, replace=False))
