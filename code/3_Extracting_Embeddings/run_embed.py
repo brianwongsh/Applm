@@ -105,7 +105,7 @@ if __name__ == "__main__":
 
         ### Define the sequence label
         # In our example, negative examples are explicitly marked with '_NEG'.
-        label = np.array([0.]) if '_NEG' in sequence_id else np.array([0.])
+        label = np.array([0.]) if '_NEG' in sequence_id else np.array([1.])
 
         ### Save the embedding as an instance
         write_pickle(output_directory, sequence_id, x, label)

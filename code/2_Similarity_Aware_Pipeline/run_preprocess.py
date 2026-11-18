@@ -94,7 +94,8 @@ if __name__ == "__main__":
     # The actual H5 data structure will reserve the first row and first column as a 
     # place-holder for any non-existing keys, which it will then return 0. i.e. the
     # H5 structure will be of size `(len(seq_keys)+1) x (len(seq_keys)+1)`
-    with h5py.File(os.path.join(output_directory, '{:}.h5'.format(project_name)), 'w') as hdf:
+    h5_path = os.path.join(output_directory, f"{project_name}.h5")
+    with h5py.File(h5_path, 'w') as hdf:
         hdf.create_dataset('0', data=np.zeros(ident_mat.shape[0] + 1, dtype=float))  # index 0 is reserved for placeholder
         for ni, i in enumerate(tqdm(seq_keys)):
             ident_list = ident_mat[ni]   # identities of sequence i against all of seq_keys
